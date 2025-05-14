@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DECIDE Framework - Heuristic Evaluation</title>
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%234285f4'/><text x='50' y='65' font-family='Arial' font-weight='bold' font-size='40' fill='white' text-anchor='middle'>RXS</text></svg>">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+        <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="d-flex flex-column flex-lg-row min-vh-100">
+        <!-- Sidebar Navigation -->
+        <div class="sidebar text-white" style="background-color: #161f2c;">
+            <div class="d-flex justify-content-center align-items-center p-3 border-bottom" style="background-color: #161f2c;">
+                <span style="font-family: 'Poppins', sans-serif; font-size: 36px; font-weight: 700; letter-spacing: -1px; color: white; text-align: center;">Rx<span style="color: #64b5f6;">Snap</span></span>
+            </div>
+
+            <div class="p-3">
+                <h6 class="sidebar-heading text-uppercase opacity-75 small mb-3">Evaluation</h6>
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="index.html">
+                            <i class="bi bi-house-door me-2"></i> Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="participant-background.html">
+                            <i class="bi bi-people me-2"></i> Participant Background
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white active" href="decide-framework.html">
+                            <i class="bi bi-diagram-3 me-2"></i> DECIDE Framework
+                        </a>
+                    </li>
+                </ul>
+
+                <h6 class="sidebar-heading text-uppercase opacity-75 small mb-3 mt-4">Testing</h6>
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="tasks-scenario.html">
+                            <i class="bi bi-list-check me-2"></i> Tasks & Scenarios
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="usability-test-results.html">
+                            <i class="bi bi-clipboard-data me-2"></i> Usability Test Results
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="prototype-improvement.html">
+                            <i class="bi bi-arrow-up-circle me-2"></i> Improvements
+                        </a>
+                    </li>
+                </ul>
+
+                <h6 class="sidebar-heading text-uppercase opacity-75 small mb-3 mt-4">Resources</h6>
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="poster.html">
+                            <i class="bi bi-easel me-2"></i> Poster
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="prototype-video.html">
+                            <i class="bi bi-play-circle me-2"></i> Prototype Demo
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="usability-test-video.html">
+                            <i class="bi bi-camera-video me-2"></i> Usability Test Video
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Main Content Area -->
+        <div class="flex-grow-1 p-4 p-lg-5">
+            <!-- Page Header -->
+            <div class="container-fluid px-0 mb-5">
+                <div class="row align-items-center mb-4">
+                    <div class="col">
+                        <h1 class="display-5 fw-bold">DECIDE Framework</h1>
+                        <p class="lead text-muted">Structured approach for planning and conducting the KidDose
+                            application evaluation.</p>
+                    </div>
+                </div>
+                <hr class="my-4">
+            </div>
+
+            <main class="container-fluid py-4 px-4">
+                <div class="row mb-4">
+                    <div class="col-12">
+                        <div class="card border-0 shadow-sm overflow-hidden">
+                            <div class="card-header bg-primary p-0">
+                                <div class="d-flex align-items-center p-3">
+                                    <div class="rounded-circle bg-white p-2 me-3 shadow-sm">
+                                        <i class="bi bi-diagram-3 text-primary fs-4"></i>
+                                    </div>
+                                    <h2 class="card-title text-white m-0">The DECIDE Framework</h2>
+                                </div>
+                                <div class="progress" style="height: 4px;">
+                                    <div class="progress-bar bg-secondary" role="progressbar" style="width: 100%"
+                                        aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                            <div class="card-body p-4">
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <p class="card-text lead">The DECIDE framework is a structured approach for
+                                            planning and conducting usability evaluations.
+                                            It provides a systematic way to evaluate interactive systems, ensuring that
+                                            all important aspects
+                                            of the evaluation are considered.</p>
+                                    </div>
+                                    <div class="col-md-4 text-center d-none d-md-block">
+                                        <img src="images/decide-diagram.svg" alt="DECIDE Framework Diagram"
+                                            class="img-fluid" style="max-height: 150px;">
+                                    </div>
+                                </div>
+
+                                <div class="alert alert-info mt-4 border-start border-info border-4">
+                                    <div class="d-flex">
+                                        <div class="me-3">
+                                            <i class="bi bi-info-circle-fill text-info fs-4"></i>
+                                        </div>
+                                        <div>
+                                            <h5 class="alert-heading">Application Context</h5>
+                                            <p class="mb-0">This framework was used to guide our usability testing of
+                                                the KidDose medication reminder application, helping us
+                                                structure our approach to identifying usability issues and recommending
+                                                improvements.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="row">
+                    <!-- D - Determine the goals -->
+                    <div class="col-12 mb-4" id="component-d1">
+                        <div class="card border-0 shadow-sm h-100 position-relative overflow-hidden framework-card">
+                            <div class="card-header bg-primary text-white">
+                                <div class="d-flex align-items-center">
+                                    <div class="rounded-circle bg-white text-primary fw-bold d-flex align-items-center justify-content-center me-3"
+                                        style="width: 36px; height: 36px;">D</div>
+                                    <h5 class="m-0">Determine the goals</h5>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="mb-3">Introduction</h5>
+                                <p>This usability testing activity aims to evaluate a prototype mobile application
+                                    designed to help users manage their medication schedules. The app allows users to
+                                    scan the name of their medicine, input dosage frequency, duration, and specific
+                                    times, and receive timely reminders through alarms.</p>
+
+                                <h5 class="mb-3 mt-4">Goals</h5>
+                                <ul class="list-group list-group-flush mb-3">
+                                    <li class="list-group-item bg-transparent">To examine the usability and user
+                                        experience of the medication reminder app among student users.</li>
+                                    <li class="list-group-item bg-transparent">To assess the clarity and effectiveness
+                                        of the app's form-filling, dashboard display, and alarm features.</li>
+                                    <li class="list-group-item bg-transparent">To evaluate the overall intuitiveness and
+                                        visual presentation of the user interface.</li>
+                                </ul>
+
+                                <div class="mt-3 p-3 bg-light rounded border-start border-primary border-4">
+                                    <div class="d-flex">
+                                        <div
+                                            class="flex-shrink-0 me-3 d-flex align-items-center justify-content-center">
+                                            <span class="badge bg-primary rounded-circle p-2"><i
+                                                    class="bi bi-check-lg"></i></span>
+                                        </div>
+                                        <div>
+                                            <h6 class="text-primary">Key Focus:</h6>
+                                            <p class="mb-0">Our evaluation focused on assessing how effectively users
+                                                could complete key tasks like signing up, scanning medicine, and
+                                                changing their password, while measuring performance metrics and user
+                                                satisfaction.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="position-absolute top-0 end-0 p-2">
+                                <span class="badge rounded-pill bg-secondary"><i class="bi bi-1-circle me-1"></i>Step
+                                    1</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- E - Explore the questions -->
+                    <div class="col-12 mb-4" id="component-e1">
+                        <div class="card border-0 shadow-sm h-100 position-relative overflow-hidden framework-card">
+                            <div class="card-header bg-primary text-white">
+                                <div class="d-flex align-items-center">
+                                    <div class="rounded-circle bg-white text-primary fw-bold d-flex align-items-center justify-content-center me-3"
+                                        style="width: 36px; height: 36px;">E</div>
+                                    <h5 class="m-0">Explore the questions</h5>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="mb-3">Pre-Test Interview Questions</h5>
+                                <p>To understand participants' medication habits and the relevance of the app, we asked:
+                                </p>
+                                <ul class="list-group list-group-flush mb-3">
+                                    <li class="list-group-item bg-transparent">Have you been sick before?</li>
+                                    <li class="list-group-item bg-transparent">What medicine did you take?</li>
+                                    <li class="list-group-item bg-transparent">Do you take any medicine regularly?</li>
+                                    <li class="list-group-item bg-transparent">Do you currently use anything to remind
+                                        you to take your medicine?</li>
+                                    <li class="list-group-item bg-transparent">How often do you forget to take your
+                                        medication?</li>
+                                </ul>
+
+                                <h5 class="mb-3 mt-4">Application Interaction Questions</h5>
+                                <p>These questions guided our task-based usability assessment:</p>
+                                <ul class="list-group list-group-flush mb-3">
+                                    <li class="list-group-item bg-transparent">Can the user successfully sign up for an
+                                        account?</li>
+                                    <li class="list-group-item bg-transparent">Can the user scan a medicine and
+                                        accurately input dosage frequency, duration, and time?</li>
+                                    <li class="list-group-item bg-transparent">Can the user find the added medicine
+                                        entry in the dashboard?</li>
+                                    <li class="list-group-item bg-transparent">Can the user successfully change their
+                                        account password?</li>
+                                </ul>
+
+                                <div class="mt-3 p-3 bg-light rounded border-start border-primary border-4">
+                                    <div class="d-flex">
+                                        <div
+                                            class="flex-shrink-0 me-3 d-flex align-items-center justify-content-center">
+                                            <span class="badge bg-primary rounded-circle p-2"><i
+                                                    class="bi bi-check-lg"></i></span>
+                                        </div>
+                                        <div>
+                                            <h6 class="text-primary">Question Strategy:</h6>
+                                            <p class="mb-0">Our questions were designed to first establish the
+                                                participants' context and needs, then evaluate how well the app
+                                                addressed those needs through specific task performance.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="position-absolute top-0 end-0 p-2">
+                                <span class="badge rounded-pill bg-secondary"><i class="bi bi-2-circle me-1"></i>Step
+                                    2</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- C - Choose the evaluation methods -->
+                    <div class="col-12 mb-4" id="component-c">
+                        <div class="card border-0 shadow-sm h-100 position-relative overflow-hidden framework-card">
+                            <div class="card-header bg-primary text-white">
+                                <div class="d-flex align-items-center">
+                                    <div class="rounded-circle bg-white text-primary fw-bold d-flex align-items-center justify-content-center me-3"
+                                        style="width: 36px; height: 36px;">C</div>
+                                    <h5 class="m-0">Choose the evaluation methods</h5>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <p>We conducted in-person usability testing with participants from the BS in Information
+                                    Technology program. Since our classes were asynchronous and not held on campus, the
+                                    testing sessions took place off-campus in quiet, low-distraction environments such
+                                    as peaceful study corners and low-traffic indoor spaces. Each participant interacted
+                                    with the app using a mobile prototype run on a laptop, allowing better visibility
+                                    and smoother facilitation of the tasks.</p>
+
+                                <p>Before testing, we explained the purpose and features of the app and asked them to
+                                    sign a video consent form. We then guided them through three main tasks: signing up,
+                                    scanning a medicine and entering details, and changing their password.</p>
+
+                                <h5 class="mb-3 mt-4">The usability testing team consisted of:</h5>
+                                <ul class="list-group list-group-flush mb-3">
+                                    <li class="list-group-item bg-transparent"><strong>1 Facilitator</strong> –
+                                        explained the tasks and observed behavior</li>
+                                    <li class="list-group-item bg-transparent"><strong>1 Note-taker</strong> – recorded
+                                        observations and feedback</li>
+                                    <li class="list-group-item bg-transparent"><strong>1 Timekeeper</strong> – measured
+                                        how long each task took</li>
+                                    <li class="list-group-item bg-transparent"><strong>1 Video recorder</strong> –
+                                        captured testing sessions for later analysis</li>
+                                </ul>
+
+                                <div class="mt-3 p-3 bg-light rounded border-start border-primary border-4">
+                                    <div class="d-flex">
+                                        <div
+                                            class="flex-shrink-0 me-3 d-flex align-items-center justify-content-center">
+                                            <span class="badge bg-primary rounded-circle p-2"><i
+                                                    class="bi bi-check-lg"></i></span>
+                                        </div>
+                                        <div>
+                                            <h6 class="text-primary">Testing Environment:</h6>
+                                            <p class="mb-0">By conducting tests in quiet environments with a
+                                                laptop-based prototype, we were able to closely observe user
+                                                interactions and gather detailed feedback despite the limitations of not
+                                                being able to test on actual mobile devices.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="position-absolute top-0 end-0 p-2">
+                                <span class="badge rounded-pill bg-secondary"><i class="bi bi-3-circle me-1"></i>Step
+                                    3</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- I - Identify practical issues -->
+                    <div class="col-12 mb-4" id="component-i">
+                        <div class="card border-0 shadow-sm h-100 position-relative overflow-hidden framework-card">
+                            <div class="card-header bg-primary text-white">
+                                <div class="d-flex align-items-center">
+                                    <div class="rounded-circle bg-white text-primary fw-bold d-flex align-items-center justify-content-center me-3"
+                                        style="width: 36px; height: 36px;">I</div>
+                                    <h5 class="m-0">Identify practical issues</h5>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="mb-3">Participants</h5>
+                                <p>Six undergraduate BS in Information Technology students who had recently been sick
+                                    and were familiar with taking medicine participated in the usability test. All were
+                                    comfortable using mobile applications and owned Android smartphones. Although the
+                                    prototype was designed for mobile devices, the test was conducted using the mobile
+                                    version of the prototype in Figma on a laptop. This approach allowed for better
+                                    visibility and smoother facilitation during testing, especially since sessions were
+                                    held off-campus due to asynchronous classes and conducted in quiet, low-distraction
+                                    environments.</p>
+
+                                <div class="table-responsive mt-4 mb-4">
+                                    <table class="table table-bordered table-hover">
+                                        <thead class="table-light">
+                                            <tr>
+                                                <th>No</th>
+                                                <th>Gender</th>
+                                                <th>Age</th>
+                                                <th>Year</th>
+                                                <th>Course</th>
+                                                <th>Brief Description</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Male</td>
+                                                <td>21</td>
+                                                <td>3rd Year</td>
+                                                <td>BS in Information Technology</td>
+                                                <td>Occasionally takes Paracetamol (Biogesic) when sick. He does not
+                                                    take medication regularly and does not use any reminder system. He
+                                                    sometimes forgets to take his medicine.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>Male</td>
+                                                <td>20</td>
+                                                <td>3rd Year</td>
+                                                <td>BS in Information Technology</td>
+                                                <td>Takes Paracetamol when needed but not on a regular basis. He does
+                                                    not use any reminders and often forgets to take his medication.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>Male</td>
+                                                <td>21</td>
+                                                <td>3rd Year</td>
+                                                <td>BS in Information Technology</td>
+                                                <td>Has taken Neozep and Paracetamol in the past when sick. He does not
+                                                    take medication regularly and does not use any reminder tools. He
+                                                    sometimes forgets to take his medicine.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>4</td>
+                                                <td>Male</td>
+                                                <td>21</td>
+                                                <td>3rd Year</td>
+                                                <td>BS in Information Technology</td>
+                                                <td>Does not take medication regularly and does not use any reminder
+                                                    system. Most of the time, he forgets to take his medicine.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>5</td>
+                                                <td>Male</td>
+                                                <td>20</td>
+                                                <td>3rd Year</td>
+                                                <td>BS in Information Technology</td>
+                                                <td>Takes medicine only when prescribed. He does not use any digital
+                                                    reminders but is regularly reminded by his parents. Despite this, he
+                                                    still tends to forget his medication.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>6</td>
+                                                <td>Male</td>
+                                                <td>22</td>
+                                                <td>3rd Year</td>
+                                                <td>BS in Information Technology</td>
+                                                <td>Recently took Bioflu after getting sick. He does not use any
+                                                    reminder system and occasionally forgets to take his medicine.</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <div class="mt-3 p-3 bg-light rounded border-start border-primary border-4">
+                                    <div class="d-flex">
+                                        <div
+                                            class="flex-shrink-0 me-3 d-flex align-items-center justify-content-center">
+                                            <span class="badge bg-primary rounded-circle p-2"><i
+                                                    class="bi bi-check-lg"></i></span>
+                                        </div>
+                                        <div>
+                                            <h6 class="text-primary">Participant Selection:</h6>
+                                            <p class="mb-0">Our participants were ideal for testing the medication
+                                                reminder app as they all had recent experience with taking medication
+                                                and shared a common challenge of forgetting to take their medicine,
+                                                which is precisely the problem our app aims to solve.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="position-absolute top-0 end-0 p-2">
+                                <span class="badge rounded-pill bg-secondary"><i class="bi bi-4-circle me-1"></i>Step
+                                    4</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- D - Decide how to deal with ethical issues -->
+                    <div class="col-12 mb-4" id="component-d2">
+                        <div class="card border-0 shadow-sm h-100 position-relative overflow-hidden framework-card">
+                            <div class="card-header bg-primary text-white">
+                                <div class="d-flex align-items-center">
+                                    <div class="rounded-circle bg-white text-primary fw-bold d-flex align-items-center justify-content-center me-3"
+                                        style="width: 36px; height: 36px;">D</div>
+                                    <h5 class="m-0">Decide how to deal with ethical issues</h5>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <ul class="list-group list-group-flush mb-4">
+                                    <li class="list-group-item bg-transparent">All participants signed a video and
+                                        participation consent form prior to testing.</li>
+                                    <li class="list-group-item bg-transparent">The test's purpose and process were
+                                        explained clearly.</li>
+                                    <li class="list-group-item bg-transparent">Personal information was handled with
+                                        confidentiality.</li>
+                                    <li class="list-group-item bg-transparent">Participants were informed of their right
+                                        to withdraw at any time.</li>
+                                    <li class="list-group-item bg-transparent">No identifying data was used in the
+                                        analysis or reports.</li>
+                                </ul>
+
+                                <h5 class="mb-3">Video Consent Form</h5>
+                                <div class="card mb-4 border">
+                                    <div class="card-body">
+                                        <h4 class="text-center mb-4">Video Consent Form</h4>
+                                        <p>Without expectation of compensation or other remuneration, now or in the
+                                            future, I hereby give my consent to MU Cyber Cub Reservation System, its
+                                            affiliates and agents, to use my image and likeness and/or any interview
+                                            statements from me in its publication, advertising or other media activities
+                                            (including the Internet).</p>
+                                        <p>This consent includes, but is not limited to: (initial where applicable)</p>
+                                        <div class="mb-3">
+                                            <div class="d-flex align-items-start mb-2">
+                                                <div class="border border-dark me-2 mt-1 flex-shrink-0"
+                                                    style="width: 20px; height: 20px;"></div>
+                                                <div>
+                                                    <span>(a) Permission to interview, film, photograph, tape, or
+                                                        otherwise make a video reproduction of me and/or record my
+                                                        voice;</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="d-flex align-items-start mb-2">
+                                                <div class="border border-dark me-2 mt-1 flex-shrink-0"
+                                                    style="width: 20px; height: 20px;"></div>
+                                                <div>
+                                                    <span>(b) Permission to use my name; and</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="d-flex align-items-start mb-2">
+                                                <div class="border border-dark me-2 mt-1 flex-shrink-0"
+                                                    style="width: 20px; height: 20px;"></div>
+                                                <div>
+                                                    <span>(c) Permission to use quotes from the interview(s) (or
+                                                        excerpts of such quotes), the film, photograph(s), tape(s)
+                                                        tape(s) or reproduction(s) of me, and/or recording of my voice,
+                                                        in part or in whole, in its publications, in newspapers,
+                                                        magazines and other print media, on television, radio and
+                                                        electronic media (including the Internet), in theatrical media
+                                                        and/or in mailings for educational and awareness.</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p>This consent is given in perpetuity, and does not require prior approval by
+                                            me.</p>
+                                        <div class="mb-3">
+                                            <p class="mb-1">Name: <span class="border-bottom border-dark"
+                                                    style="display: inline-block; width: 300px;">&nbsp;</span></p>
+                                        </div>
+                                        <div class="mb-3">
+                                            <p class="mb-1">Signature: <span class="border-bottom border-dark"
+                                                    style="display: inline-block; width: 300px;">&nbsp;</span></p>
+                                        </div>
+                                        <div class="mb-3">
+                                            <p class="mb-1">Date: <span class="border-bottom border-dark"
+                                                    style="display: inline-block; width: 300px;">&nbsp;</span></p>
+                                        </div>
+                                        <div class="mb-3">
+                                            <p class="mb-1">The following is required if the consent form has to be
+                                                read: I certify that I have read this consent form in full to signature
+                                                appears above.</p>
+                                        </div>
+                                        <div class="mb-3">
+                                            <p class="mb-1"><span class="border-bottom border-dark"
+                                                    style="display: inline-block; width: 100%;">&nbsp;</span></p>
+                                            <p class="text-center mb-0">Date Signature of Organization Representative or
+                                                Community Leader</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mt-3 p-3 bg-light rounded border-start border-primary border-4">
+                                    <div class="d-flex">
+                                        <div
+                                            class="flex-shrink-0 me-3 d-flex align-items-center justify-content-center">
+                                            <span class="badge bg-primary rounded-circle p-2"><i
+                                                    class="bi bi-check-lg"></i></span>
+                                        </div>
+                                        <div>
+                                            <h6 class="text-primary">Ethical Compliance:</h6>
+                                            <p class="mb-0">By implementing these ethical measures, we ensured that
+                                                participants' rights were protected throughout the testing process while
+                                                still collecting valuable data for our evaluation.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="position-absolute top-0 end-0 p-2">
+                                <span class="badge rounded-pill bg-secondary"><i class="bi bi-5-circle me-1"></i>Step
+                                    5</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- E - Evaluate, interpret, and present the data -->
+                    <div class="col-12 mb-4" id="component-e2">
+                        <div class="card border-0 shadow-sm h-100 position-relative overflow-hidden framework-card">
+                            <div class="card-header bg-primary text-white">
+                                <div class="d-flex align-items-center">
+                                    <div class="rounded-circle bg-white text-primary fw-bold d-flex align-items-center justify-content-center me-3"
+                                        style="width: 36px; height: 36px;">E</div>
+                                    <h5 class="m-0">Evaluate, interpret, and present the data</h5>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <p>To assess the system's usability, we developed an evaluation form aimed at measuring
+                                    three key aspects: user performance, satisfaction level, and perceived task
+                                    complexity. We utilized a usability specification table to structure the evaluation
+                                    and recorded statistical data for each participant based on their interaction with
+                                    the prototype. This approach enabled us to gather quantifiable insights on how
+                                    effectively users completed tasks, how satisfied they were with the experience, and
+                                    how difficult they found each task.</p>
+
+                                <h5 class="mb-3 mt-4">Tasks Evaluated</h5>
+                                <ol class="mb-4">
+                                    <li class="mb-2"><strong>Task 1: Sign Up</strong></li>
+                                    <li class="mb-2"><strong>Task 2: Scan and Fill Medication Details</strong></li>
+                                    <li class="mb-2"><strong>Task 3: Change Password</strong></li>
+                                </ol>
+
+                                <div class="table-responsive mb-4">
+                                    <table class="table table-bordered table-hover">
+                                        <thead class="table-light">
+                                            <tr>
+                                                <th>Usability Attribute</th>
+                                                <th>Measurement Instrument</th>
+                                                <th>Value to be measured</th>
+                                                <th>Current level</th>
+                                                <th>Target level</th>
+                                                <th>Observed result</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td rowspan="3">Initial Performance</td>
+                                                <td>Sign up</td>
+                                                <td>Time on task</td>
+                                                <td>10.7 seconds</td>
+                                                <td>15 seconds</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Score (1-10)</td>
+                                                <td>9.5</td>
+                                                <td>8</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Complexity level (1-5)</td>
+                                                <td>1</td>
+                                                <td>1</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td rowspan="3">Initial Performance</td>
+                                                <td>Scan Medicine</td>
+                                                <td>Time on task</td>
+                                                <td>13.3 seconds</td>
+                                                <td>15 seconds</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Score (1-10)</td>
+                                                <td>9.83</td>
+                                                <td>9</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Complexity level (1-5)</td>
+                                                <td>1</td>
+                                                <td>3</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td rowspan="3">Initial Performance</td>
+                                                <td>Change Password</td>
+                                                <td>Time on task</td>
+                                                <td>15.9 seconds</td>
+                                                <td>20 seconds</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Score (1-10)</td>
+                                                <td>8.33</td>
+                                                <td>9</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Complexity level (1-5)</td>
+                                                <td>1</td>
+                                                <td>2</td>
+                                                <td></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <h5 class="mb-3 mt-4">Individual Participant Results</h5>
+
+                                <div class="row mb-4">
+                                    <div class="col-12 mb-4">
+                                        <div class="card border-0 shadow-sm">
+                                            <div class="card-header bg-primary text-white">
+                                                <h5 class="mb-0">Participant 1</h5>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        <img src="images/participants/PARTICIPANT 1.jpg"
+                                                            alt="Participant 1 Testing Session"
+                                                            class="img-fluid mb-3 rounded">
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                        <div class="table-responsive">
+                                                            <table class="table table-bordered">
+                                                                <thead class="table-light">
+                                                                    <tr>
+                                                                        <th></th>
+                                                                        <th>Time to use (sec)</th>
+                                                                        <th>Satisfaction rate</th>
+                                                                        <th>Complexity level</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>Task 1</td>
+                                                                        <td>13</td>
+                                                                        <td>9</td>
+                                                                        <td>1</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Task 2</td>
+                                                                        <td>22</td>
+                                                                        <td>10</td>
+                                                                        <td>1</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Task 3</td>
+                                                                        <td>22</td>
+                                                                        <td>9</td>
+                                                                        <td>1</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                        <div class="alert alert-light mt-3">
+                                                            <strong>Feedback and suggestions:</strong> Add a specific
+                                                            field for change password
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 mb-4">
+                                        <div class="card border-0 shadow-sm">
+                                            <div class="card-header bg-primary text-white">
+                                                <h5 class="mb-0">Participant 2</h5>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        <img src="images/participants/PARTICIPANT 2.jpg"
+                                                            alt="Participant 2 Testing Session"
+                                                            class="img-fluid mb-3 rounded">
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                        <div class="table-responsive">
+                                                            <table class="table table-bordered">
+                                                                <thead class="table-light">
+                                                                    <tr>
+                                                                        <th></th>
+                                                                        <th>Time to use (sec)</th>
+                                                                        <th>Satisfaction rate</th>
+                                                                        <th>Complexity level</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>Task 1</td>
+                                                                        <td>12</td>
+                                                                        <td>9</td>
+                                                                        <td>1</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Task 2</td>
+                                                                        <td>9</td>
+                                                                        <td>10</td>
+                                                                        <td>1</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Task 3</td>
+                                                                        <td>12</td>
+                                                                        <td>9</td>
+                                                                        <td>1</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                        <div class="alert alert-light mt-3">
+                                                            <strong>Feedback and suggestions:</strong> Easy to navigate
+                                                            and just make a field for change password
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 mb-4">
+                                    <div class="card border-0 shadow-sm">
+                                        <div class="card-header bg-primary text-white">
+                                            <h5 class="mb-0">Participant 3</h5>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <img src="images/participants/PARTICIPANT 3.jpg"
+                                                        alt="Participant 3 Testing Session"
+                                                        class="img-fluid mb-3 rounded">
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <div class="table-responsive">
+                                                        <table class="table table-bordered">
+                                                            <thead class="table-light">
+                                                                <tr>
+                                                                    <th></th>
+                                                                    <th>Time to use (sec)</th>
+                                                                    <th>Satisfaction rate</th>
+                                                                    <th>Complexity level</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>Task 1</td>
+                                                                    <td>11</td>
+                                                                    <td>10</td>
+                                                                    <td>1</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Task 2</td>
+                                                                    <td>12</td>
+                                                                    <td>10</td>
+                                                                    <td>1</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Task 3</td>
+                                                                    <td>10</td>
+                                                                    <td>9</td>
+                                                                    <td>1</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <div class="alert alert-light mt-3">
+                                                        <strong>Feedback and suggestions:</strong> Create an input field
+                                                        for change password
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 mb-4">
+                                    <div class="card border-0 shadow-sm">
+                                        <div class="card-header bg-primary text-white">
+                                            <h5 class="mb-0">Participant 4</h5>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <img src="images/participants/PARTICIPANT 4.jpg"
+                                                        alt="Participant 4 Testing Session"
+                                                        class="img-fluid mb-3 rounded">
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <div class="table-responsive">
+                                                        <table class="table table-bordered">
+                                                            <thead class="table-light">
+                                                                <tr>
+                                                                    <th></th>
+                                                                    <th>Time to use (sec)</th>
+                                                                    <th>Satisfaction rate</th>
+                                                                    <th>Complexity level</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>Task 1</td>
+                                                                    <td>7</td>
+                                                                    <td>10</td>
+                                                                    <td>1</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Task 2</td>
+                                                                    <td>11</td>
+                                                                    <td>9</td>
+                                                                    <td>1</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Task 3</td>
+                                                                    <td>12</td>
+                                                                    <td>8</td>
+                                                                    <td>1</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <div class="alert alert-light mt-3">
+                                                        <strong>Feedback and suggestions:</strong> Create a privacy
+                                                        settings field
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 mb-4">
+                                    <div class="card border-0 shadow-sm">
+                                        <div class="card-header bg-primary text-white">
+                                            <h5 class="mb-0">Participant 5</h5>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <img src="images/participants/PARTICIPANT 5.jpg"
+                                                        alt="Participant 5 Testing Session"
+                                                        class="img-fluid mb-3 rounded">
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <div class="table-responsive">
+                                                        <table class="table table-bordered">
+                                                            <thead class="table-light">
+                                                                <tr>
+                                                                    <th></th>
+                                                                    <th>Time to use (sec)</th>
+                                                                    <th>Satisfaction rate</th>
+                                                                    <th>Complexity level</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>Task 1</td>
+                                                                    <td>10</td>
+                                                                    <td>9</td>
+                                                                    <td>1</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Task 2</td>
+                                                                    <td>16</td>
+                                                                    <td>10</td>
+                                                                    <td>1</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Task 3</td>
+                                                                    <td>15</td>
+                                                                    <td>7</td>
+                                                                    <td>1</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <div class="alert alert-light mt-3">
+                                                        <strong>Feedback and suggestions:</strong> The design is good
+                                                        and create an field for change password
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 mb-4">
+                                    <div class="card border-0 shadow-sm">
+                                        <div class="card-header bg-primary text-white">
+                                            <h5 class="mb-0">Participant 6</h5>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <img src="images/participants/PARTICIPANT 6.jpg"
+                                                        alt="Participant 6 Testing Session"
+                                                        class="img-fluid mb-3 rounded">
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <div class="table-responsive">
+                                                        <table class="table table-bordered">
+                                                            <thead class="table-light">
+                                                                <tr>
+                                                                    <th></th>
+                                                                    <th>Time to use (sec)</th>
+                                                                    <th>Satisfaction rate</th>
+                                                                    <th>Complexity level</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>Task 1</td>
+                                                                    <td>11</td>
+                                                                    <td>10</td>
+                                                                    <td>1</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Task 2</td>
+                                                                    <td>10</td>
+                                                                    <td>10</td>
+                                                                    <td>1</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Task 3</td>
+                                                                    <td>14</td>
+                                                                    <td>8</td>
+                                                                    <td>1</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <div class="alert alert-light mt-3">
+                                                        <strong>Feedback and suggestions:</strong> Add a dedicated
+                                                        password change option in settings
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mt-3 p-3 bg-light rounded border-start border-primary border-4">
+                                    <div class="d-flex">
+                                        <div
+                                            class="flex-shrink-0 me-3 d-flex align-items-center justify-content-center">
+                                            <span class="badge bg-primary rounded-circle p-2"><i
+                                                    class="bi bi-check-lg"></i></span>
+                                        </div>
+                                        <div>
+                                            <h6 class="text-primary">Key Findings:</h6>
+                                            <p class="mb-0">Our evaluation revealed that users could complete all tasks
+                                                within the target time frames, with high satisfaction scores. The most
+                                                common feedback was the need for a dedicated field for changing
+                                                passwords, which will be implemented in the next iteration of the app.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="position-absolute top-0 end-0 p-2">
+                                <span class="badge rounded-pill bg-secondary"><i class="bi bi-6-circle me-1"></i>Step
+                                    6</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <footer class="bg-dark border-top py-3 mt-auto">
+                <div class="container">
+                    <div class="d-flex justify-content-between">
+                        <div>
+                            <span class="text-white">&copy; 2025 KidDose Heuristic Evaluation. All rights
+                                reserved.</span>
+                        </div>
+                        <div>
+                            <span class="text-white">A usability evaluation of the pediatric medication management
+                                app</span>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div><!-- End of content-wrapper -->
+    </div><!-- End of flex container -->
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

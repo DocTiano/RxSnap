@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="200" cy="200" r="180" fill="#f8f9fa" stroke="#4A9FDC" stroke-width="2"/>
+  
+  <!-- Center circle -->
+  <circle cx="200" cy="200" r="60" fill="#4A9FDC" stroke="#ffffff" stroke-width="2"/>
+  <text x="200" y="210" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#ffffff">DECIDE</text>
+  
+  <!-- D - Determine -->
+  <g transform="translate(200, 80)">
+    <circle cx="0" cy="0" r="30" fill="#ffffff" stroke="#4A9FDC" stroke-width="2"/>
+    <text x="0" y="5" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#4A9FDC">D</text>
+    <text x="0" y="-45" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333333">Determine</text>
+  </g>
+  
+  <!-- E - Explore -->
+  <g transform="translate(280, 120)">
+    <circle cx="0" cy="0" r="30" fill="#ffffff" stroke="#4A9FDC" stroke-width="2"/>
+    <text x="0" y="5" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#4A9FDC">E</text>
+    <text x="0" y="-45" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333333">Explore</text>
+  </g>
+  
+  <!-- C - Choose -->
+  <g transform="translate(280, 280)">
+    <circle cx="0" cy="0" r="30" fill="#ffffff" stroke="#4A9FDC" stroke-width="2"/>
+    <text x="0" y="5" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#4A9FDC">C</text>
+    <text x="0" y="-45" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333333">Choose</text>
+  </g>
+  
+  <!-- I - Identify -->
+  <g transform="translate(200, 320)">
+    <circle cx="0" cy="0" r="30" fill="#ffffff" stroke="#4A9FDC" stroke-width="2"/>
+    <text x="0" y="5" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#4A9FDC">I</text>
+    <text x="0" y="-45" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333333">Identify</text>
+  </g>
+  
+  <!-- D - Decide -->
+  <g transform="translate(120, 280)">
+    <circle cx="0" cy="0" r="30" fill="#ffffff" stroke="#4A9FDC" stroke-width="2"/>
+    <text x="0" y="5" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#4A9FDC">D</text>
+    <text x="0" y="-45" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333333">Decide</text>
+  </g>
+  
+  <!-- E - Evaluate -->
+  <g transform="translate(120, 120)">
+    <circle cx="0" cy="0" r="30" fill="#ffffff" stroke="#4A9FDC" stroke-width="2"/>
+    <text x="0" y="5" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#4A9FDC">E</text>
+    <text x="0" y="-45" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#333333">Evaluate</text>
+  </g>
+  
+  <!-- Connecting lines -->
+  <line x1="200" y1="140" x2="200" y2="80" stroke="#4A9FDC" stroke-width="2" stroke-dasharray="5,5"/>
+  <line x1="248" y1="165" x2="280" y2="120" stroke="#4A9FDC" stroke-width="2" stroke-dasharray="5,5"/>
+  <line x1="248" y1="235" x2="280" y2="280" stroke="#4A9FDC" stroke-width="2" stroke-dasharray="5,5"/>
+  <line x1="200" y1="260" x2="200" y2="320" stroke="#4A9FDC" stroke-width="2" stroke-dasharray="5,5"/>
+  <line x1="152" y1="235" x2="120" y2="280" stroke="#4A9FDC" stroke-width="2" stroke-dasharray="5,5"/>
+  <line x1="152" y1="165" x2="120" y2="120" stroke="#4A9FDC" stroke-width="2" stroke-dasharray="5,5"/>
+  
+  <!-- Step numbers -->
+  <circle cx="200" cy="60" r="15" fill="#FF9966" stroke="#ffffff" stroke-width="1"/>
+  <text x="200" y="65" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#ffffff">1</text>
+  
+  <circle cx="300" cy="120" r="15" fill="#FF9966" stroke="#ffffff" stroke-width="1"/>
+  <text x="300" y="125" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#ffffff">2</text>
+  
+  <circle cx="300" cy="280" r="15" fill="#FF9966" stroke="#ffffff" stroke-width="1"/>
+  <text x="300" y="285" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#ffffff">3</text>
+  
+  <circle cx="200" cy="340" r="15" fill="#FF9966" stroke="#ffffff" stroke-width="1"/>
+  <text x="200" y="345" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#ffffff">4</text>
+  
+  <circle cx="100" cy="280" r="15" fill="#FF9966" stroke="#ffffff" stroke-width="1"/>
+  <text x="100" y="285" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#ffffff">5</text>
+  
+  <circle cx="100" cy="120" r="15" fill="#FF9966" stroke="#ffffff" stroke-width="1"/>
+  <text x="100" y="125" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#ffffff">6</text>
+</svg>

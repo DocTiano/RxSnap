@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usability Test Results - Heuristic Evaluation</title>
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%234285f4'/><text x='50' y='65' font-family='Arial' font-weight='bold' font-size='40' fill='white' text-anchor='middle'>RXS</text></svg>">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .severity-0 {
+            background-color: #e8f5e9;
+        }
+
+        .severity-1 {
+            background-color: #fffde7;
+        }
+
+        .severity-2 {
+            background-color: #fff8e1;
+        }
+
+        .severity-3 {
+            background-color: #ffebee;
+        }
+
+        .severity-4 {
+            background-color: #ffcdd2;
+        }
+
+        .chart-container {
+            margin: 2rem 0;
+            text-align: center;
+            height: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="d-flex flex-column flex-lg-row min-vh-100">
+        <!-- Sidebar Navigation -->
+        <div class="sidebar text-white" style="background-color: #161f2c;">
+            <div class="d-flex justify-content-center align-items-center p-3 border-bottom" style="background-color: #161f2c;">
+                <span style="font-family: 'Poppins', sans-serif; font-size: 36px; font-weight: 700; letter-spacing: -1px; color: white; text-align: center;">Rx<span style="color: #64b5f6;">Snap</span></span>
+            </div>
+
+            <div class="p-3">
+                <h6 class="sidebar-heading text-uppercase opacity-75 small mb-3">Evaluation</h6>
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="index.html">
+                            <i class="bi bi-house-door me-2"></i> Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="participant-background.html">
+                            <i class="bi bi-people me-2"></i> Participant Background
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="decide-framework.html">
+                            <i class="bi bi-diagram-3 me-2"></i> DECIDE Framework
+                        </a>
+                    </li>
+                </ul>
+
+                <h6 class="sidebar-heading text-uppercase opacity-75 small mb-3 mt-4">Testing</h6>
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="tasks-scenario.html">
+                            <i class="bi bi-list-check me-2"></i> Tasks & Scenarios
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white active" href="usability-test-results.html">
+                            <i class="bi bi-clipboard-data me-2"></i> Usability Test Results
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="prototype-improvement.html">
+                            <i class="bi bi-arrow-up-circle me-2"></i> Improvements
+                        </a>
+                    </li>
+                </ul>
+
+                <h6 class="sidebar-heading text-uppercase opacity-75 small mb-3 mt-4">Resources</h6>
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="poster.html">
+                            <i class="bi bi-easel me-2"></i> Poster
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="prototype-video.html">
+                            <i class="bi bi-play-circle me-2"></i> Prototype Demo
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="usability-test-video.html">
+                            <i class="bi bi-camera-video me-2"></i> Usability Test Video
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- Main Content Area -->
+        <div class="flex-grow-1 p-4 p-lg-5">
+            <!-- Page Header -->
+            <div class="container-fluid px-0 mb-5">
+                <div class="row align-items-center mb-4">
+                    <div class="col">
+                        <h1 class="display-5 fw-bold">Usability Test Results</h1>
+                        <p class="lead text-muted">Findings and analysis from the KidDose application usability testing
+                            sessions.</p>
+                    </div>
+                </div>
+                <hr class="my-4">
+            </div>
+
+            <main class="container-fluid py-4 px-4">
+                <!-- Task 1: Sign up Chart -->
+                <div class="row mb-4">
+                    <div class="col-12">
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-header bg-primary text-white">
+                                <h3 class="h5 m-0">Task 1: Sign up</h3>
+                            </div>
+                            <div class="card-body p-4">
+                                <div class="chart-container">
+                                    <canvas id="task1Chart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Task 2: Scan Medicine Chart -->
+                <div class="row mb-4">
+                    <div class="col-12">
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-header bg-primary text-white">
+                                <h3 class="h5 m-0">Task 2: Scan Medicine</h3>
+                            </div>
+                            <div class="card-body p-4">
+                                <div class="chart-container">
+                                    <canvas id="task2Chart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Task 3: Change Password Chart -->
+                <div class="row mb-4">
+                    <div class="col-12">
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-header bg-primary text-white">
+                                <h3 class="h5 m-0">Task 3: Change Password</h3>
+                            </div>
+                            <div class="card-body p-4">
+                                <div class="chart-container">
+                                    <canvas id="task3Chart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Average Usability Test Measurement Card -->
+                <div class="row mb-4">
+                    <div class="col-12">
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-header bg-primary text-white">
+                                <h3 class="h5 m-0"><i class="bi bi-table me-2"></i>Average Usability Test Measurement</h3>
+                            </div>
+                            <div class="card-body p-4">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered">
+                                        <thead class="table-light">
+                                            <tr>
+                                                <th>Usability Attribute</th>
+                                                <th>Measurement Instrument</th>
+                                                <th>Value to be measured</th>
+                                                <th>Current level</th>
+                                                <th>Target level</th>
+                                                <th>Observed result</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td rowspan="3">Initial Performance</td>
+                                                <td>Sign up</td>
+                                                <td>Time on task</td>
+                                                <td>10.7 seconds</td>
+                                                <td>15 seconds</td>
+                                                <td>Task completed easily</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Score (1-10)</td>
+                                                <td>9.5</td>
+                                                <td>8</td>
+                                                <td>Exceeded target score</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td style="white-space: nowrap;">Complexity level (1-5)</td>
+                                                <td>1</td>
+                                                <td>1</td>
+                                                <td>User managed to finish easily</td>
+                                            </tr>
+                                            <tr>
+                                                <td rowspan="3">Initial Performance</td>
+                                                <td>Scan Medicine</td>
+                                                <td>Time on task</td>
+                                                <td>13.3 seconds</td>
+                                                <td>15 seconds</td>
+                                                <td>Completed task efficiently</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Score (1-10)</td>
+                                                <td>9.83</td>
+                                                <td>9</td>
+                                                <td>Met target score</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td style="white-space: nowrap;">Complexity level (1-5)</td>
+                                                <td>1</td>
+                                                <td>3</td>
+                                                <td>Found feature quickly</td>
+                                            </tr>
+                                            <tr>
+                                                <td rowspan="3">Initial Performance</td>
+                                                <td>Change Password</td>
+                                                <td>Time on task</td>
+                                                <td>15.9 seconds</td>
+                                                <td>20 seconds</td>
+                                                <td>Labels didn't match expectation</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>Score (1-10)</td>
+                                                <td>8.33</td>
+                                                <td>9</td>
+                                                <td>Close to target</td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td style="white-space: nowrap;">Complexity level (1-5)</td>
+                                                <td>1</td>
+                                                <td>2</td>
+                                                <td>Password change instructions unclear</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feedback and Suggestions Card -->
+                <div class="row mb-4">
+                    <div class="col-12">
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-header bg-primary text-white">
+                                <h3 class="h5 m-0"><i class="bi bi-chat-square-text me-2"></i>Feedback and Suggestion from Participants</h3>
+                            </div>
+                            <div class="card-body p-4">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item bg-transparent d-flex align-items-start">
+                                        <i class="bi bi-exclamation-circle-fill text-danger me-3 mt-1"></i>
+                                        <span>Change password process is confusing.</span>
+                                    </li>
+                                    <li class="list-group-item bg-transparent d-flex align-items-start">
+                                        <i class="bi bi-lightbulb-fill text-warning me-3 mt-1"></i>
+                                        <span>Suggestion: Create a separate field or make the label clearer for the change of password section.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Usability Test Summary Card -->
+                <div class="row mb-4">
+                    <div class="col-12">
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-header bg-primary text-white">
+                                <h3 class="h5 m-0"><i class="bi bi-graph-up me-2"></i>Summarize Usability Test</h3>
+                            </div>
+                            <div class="card-body p-4">
+                                <p>During the usability test, we observed varying levels of user clarity across tasks. In the first task, the sign-up process, some users experienced initial confusion but were ultimately able to complete the task successfully. In the second task, scanning medicine, users navigated the interface with ease, as the scan button was clearly visible at the center of the bottom navigation, allowing them to complete the task without difficulty. However, in the third task, related to password management, users hesitated to interact with the password input field. This confusion arose because the field was only labeled "Password," which led to uncertainty about whether this was the correct place to change their password. A clearer label or a separate field would alleviate this confusion.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Key Problem Areas Card
+                <div class="row mb-4">
+                    <div class="col-12">
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-header bg-primary text-white">
+                                <h3 class="h5 m-0"><i class="bi bi-exclamation-circle me-2"></i>Key Problem Areas</h3>
+                            </div>
+                            <div class="card-body p-4">
+                                <p>Based on our evaluation, we identified the following key problem areas that should be
+                                    addressed in future iterations:</p>
+
+                                <div class="row row-cols-1 row-cols-md-3 g-4 mt-2">
+                                    <div class="col">
+                                        <div class="card h-100 border-danger">
+                                            <div class="card-header bg-danger text-white">
+                                                <h5 class="card-title m-0">Navigation Structure</h5>
+                                            </div>
+                                            <div class="card-body">
+                                                <p class="card-text">Users struggled to locate key features within the
+                                                    application. The medication setup process required too many steps,
+                                                    and the navigation between different sections was not intuitive for
+                                                    first-time users.</p>
+                                            </div>
+                                            <div class="card-footer bg-white">
+                                                <span class="badge bg-danger">Severity: 3 - Major</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="card h-100 border-warning">
+                                            <div class="card-header bg-warning text-dark">
+                                                <h5 class="card-title m-0">Form Design</h5>
+                                            </div>
+                                            <div class="card-body">
+                                                <p class="card-text">The medication input forms were overly complex with
+                                                    too many required fields. Users were confused by medical
+                                                    terminology, and the form lacked clear guidance on how to enter
+                                                    dosage information correctly.</p>
+                                            </div>
+                                            <div class="card-footer bg-white">
+                                                <span class="badge bg-warning text-dark">Severity: 2 - Minor</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="card h-100 border-danger">
+                                            <div class="card-header bg-danger text-white">
+                                                <h5 class="card-title m-0">Error Handling</h5>
+                                            </div>
+                                            <div class="card-body">
+                                                <p class="card-text">Error messages were not descriptive enough to help
+                                                    users understand what went wrong or how to fix the issue. In some
+                                                    cases, the application failed silently without providing any
+                                                    feedback to the user.</p>
+                                            </div>
+                                            <div class="card-footer bg-white">
+                                                <span class="badge bg-danger">Severity: 3 - Major</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+
+                <!-- Detailed Findings Accordion -->
+                <!-- <div class="row mb-4">
+                    <div class="col-12">
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-header bg-primary text-white">
+                                <h3 class="h5 m-0"><i class="bi bi-list-ul me-2"></i>Detailed Findings by Heuristic</h3>
+                            </div>
+                            <div class="card-body p-4">
+                                <p>The following sections provide detailed findings organized by Nielsen's 10 heuristic
+                                    principles.</p>
+
+                                <div class="accordion mt-3" id="heuristicAccordion">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="headingOne">
+                                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#collapseOne" aria-expanded="true"
+                                                aria-controls="collapseOne">
+                                                <strong>Visibility of System Status</strong>
+                                            </button>
+                                        </h2>
+                                        <div id="collapseOne" class="accordion-collapse collapse show"
+                                            aria-labelledby="headingOne" data-bs-parent="#heuristicAccordion">
+                                            <div class="accordion-body">
+                                                <ul class="list-group list-group-flush">
+                                                    <li class="list-group-item">
+                                                        <div class="d-flex w-100 justify-content-between">
+                                                            <h6 class="mb-1">Lack of feedback during medication setup
+                                                            </h6>
+                                                            <span class="badge bg-danger">Severity: 3</span>
+                                                        </div>
+                                                        <p class="mb-1">Users were not informed about their progress
+                                                            during the multi-step medication setup process.</p>
+                                                    </li>
+                                                    <li class="list-group-item">
+                                                        <div class="d-flex w-100 justify-content-between">
+                                                            <h6 class="mb-1">No confirmation after scheduling reminders
+                                                            </h6>
+                                                            <span class="badge bg-warning text-dark">Severity: 2</span>
+                                                        </div>
+                                                        <p class="mb-1">After setting up medication reminders, users
+                                                            received no confirmation that the reminders were
+                                                            successfully scheduled.</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="headingTwo">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                                aria-expanded="false" aria-controls="collapseTwo">
+                                                <strong>Match Between System and the Real World</strong>
+                                            </button>
+                                        </h2>
+                                        <div id="collapseTwo" class="accordion-collapse collapse"
+                                            aria-labelledby="headingTwo" data-bs-parent="#heuristicAccordion">
+                                            <div class="accordion-body">
+                                                <ul class="list-group list-group-flush">
+                                                    <li class="list-group-item">
+                                                        <div class="d-flex w-100 justify-content-between">
+                                                            <h6 class="mb-1">Medical terminology not explained</h6>
+                                                            <span class="badge bg-warning text-dark">Severity: 2</span>
+                                                        </div>
+                                                        <p class="mb-1">The application uses medical terminology that is
+                                                            not familiar to average parents without providing
+                                                            explanations or tooltips.</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div> -->
+
+                        
+
+                <!-- Recommendations Card -->
+                <!-- <div class="row mb-4">
+                    <div class="col-12">
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-header bg-primary text-white">
+                                <h3 class="h5 m-0"><i class="bi bi-lightbulb me-2"></i>Recommendations</h3>
+                            </div>
+                            <div class="card-body p-4">
+                                <p>Based on our findings, we recommend the following improvements to enhance the
+                                    usability of the KidDose application:</p>
+
+                                <div class="list-group mt-3">
+                                    <div class="list-group-item">
+                                        <div class="d-flex w-100 justify-content-between">
+                                            <h5 class="mb-1">Simplify Navigation Structure</h5>
+                                            <span class="badge bg-primary">High Priority</span>
+                                        </div>
+                                        <p class="mb-1">Redesign the main navigation to use a tab-based interface with
+                                            clear icons and labels for primary functions. Reduce the number of steps
+                                            required for medication setup by combining related inputs.</p>
+                                    </div>
+                                    <div class="list-group-item">
+                                        <div class="d-flex w-100 justify-content-between">
+                                            <h5 class="mb-1">Improve Form Design</h5>
+                                            <span class="badge bg-primary">Medium Priority</span>
+                                        </div>
+                                        <p class="mb-1">Simplify medication input forms by using progressive disclosure
+                                            techniques. Add tooltips for medical terms and provide examples of correct
+                                            dosage formats. Make optional fields clearly marked.</p>
+                                    </div>
+                                    <div class="list-group-item">
+                                        <div class="d-flex w-100 justify-content-between">
+                                            <h5 class="mb-1">Enhance Error Handling</h5>
+                                            <span class="badge bg-primary">High Priority</span>
+                                        </div>
+                                        <p class="mb-1">Implement descriptive error messages that clearly explain what
+                                            went wrong and how to fix it. Add validation to prevent errors before they
+                                            occur, especially for critical fields like medication dosage.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+
+                <!-- Conclusion Card -->
+                <!-- <div class="row mb-4">
+                    <div class="col-12">
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-body p-4">
+                                <h3 class="h5 mb-3">Conclusion</h3>
+                                <p>Our heuristic evaluation has identified several usability issues in the KidDose
+                                    mobile application that should be addressed to improve the overall user experience.
+                                    By implementing the recommendations outlined above, the application can better meet
+                                    the needs of parents managing their children's medications and immunizations.</p>
+
+                                <p>The most critical improvements relate to navigation structure, form design, and error
+                                    handling. Addressing these issues will significantly enhance the application's
+                                    usability and help achieve its goal of improving medication adherence and
+                                    immunization tracking for children.</p>
+
+                                <div class="d-grid gap-2 d-md-flex justify-content-md-end mt-4">
+                                    <a href="prototype-improvement.html" class="btn btn-primary">
+                                        <i class="bi bi-arrow-up-circle me-2"></i>View Prototype Improvements
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            </main>
+
+            <footer class="bg-dark border-top py-3 mt-auto">
+                <div class="container">
+                    <div class="d-flex justify-content-between">
+                        <div>
+                            <span class="text-white">&copy; 2025 KidDose Heuristic Evaluation. All rights
+                                reserved.</span>
+                        </div>
+                        <div>
+                            <span class="text-white">A usability evaluation of the pediatric medication management
+                                app</span>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Chart.js Implementation -->
+    <script>
+        // Wait for the DOM to be fully loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            // Task 1: Sign up Chart
+            const task1ChartCtx = document.getElementById('task1Chart').getContext('2d');
+            const task1Chart = new Chart(task1ChartCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['P1', 'P2', 'P3', 'P4', 'P5', 'P6', 'Average'],
+                    datasets: [{
+                        label: 'Time (s)',
+                        data: [13, 12, 11, 7, 10, 11, 10.7],
+                        backgroundColor: 'rgba(0, 83, 156, 0.8)',
+                        borderColor: 'rgba(0, 83, 156, 1)',
+                        borderWidth: 1
+                    }, {
+                        label: 'Satisfaction',
+                        data: [9, 9, 10, 10, 9, 10, 9.5],
+                        backgroundColor: 'rgba(153, 102, 255, 0.8)',
+                        borderColor: 'rgba(153, 102, 255, 1)',
+                        borderWidth: 1
+                    }, {
+                        label: 'Complexity',
+                        data: [1, 1, 1, 1, 1, 1, 1],
+                        backgroundColor: 'rgba(116, 185, 255, 0.8)',
+                        borderColor: 'rgba(116, 185, 255, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Task 1: Sign up'
+                        },
+                        legend: {
+                            position: 'top',
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            max: 14
+                        }
+                    }
+                }
+            });
+
+            // Task 2: Scan Medicine Chart
+            const task2ChartCtx = document.getElementById('task2Chart').getContext('2d');
+            const task2Chart = new Chart(task2ChartCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['P1', 'P2', 'P3', 'P4', 'P5', 'P6', 'Average'],
+                    datasets: [{
+                        label: 'Time (s)',
+                        data: [22, 9, 12, 11, 16, 10, 13.3],
+                        backgroundColor: 'rgba(0, 83, 156, 0.8)',
+                        borderColor: 'rgba(0, 83, 156, 1)',
+                        borderWidth: 1
+                    }, {
+                        label: 'Satisfaction',
+                        data: [10, 10, 10, 9, 10, 10, 9.83],
+                        backgroundColor: 'rgba(153, 102, 255, 0.8)',
+                        borderColor: 'rgba(153, 102, 255, 1)',
+                        borderWidth: 1
+                    }, {
+                        label: 'Complexity',
+                        data: [1, 1, 1, 1, 1, 1, 1],
+                        backgroundColor: 'rgba(116, 185, 255, 0.8)',
+                        borderColor: 'rgba(116, 185, 255, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Task 2: Scan Medicine'
+                        },
+                        legend: {
+                            position: 'top',
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            max: 25
+                        }
+                    }
+                }
+            });
+
+            // Task 3: Change Password Chart
+            const task3ChartCtx = document.getElementById('task3Chart').getContext('2d');
+            const task3Chart = new Chart(task3ChartCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['P1', 'P2', 'P3', 'P4', 'P5', 'P6', 'Average'],
+                    datasets: [{
+                        label: 'Time (s)',
+                        data: [22, 12, 16, 12, 15, 18, 15.9],
+                        backgroundColor: 'rgba(0, 83, 156, 0.8)',
+                        borderColor: 'rgba(0, 83, 156, 1)',
+                        borderWidth: 1
+                    }, {
+                        label: 'Satisfaction',
+                        data: [9, 9, 9, 8, 7, 8, 8.33],
+                        backgroundColor: 'rgba(153, 102, 255, 0.8)',
+                        borderColor: 'rgba(153, 102, 255, 1)',
+                        borderWidth: 1
+                    }, {
+                        label: 'Complexity',
+                        data: [1, 1, 1, 1, 1, 1, 1],
+                        backgroundColor: 'rgba(116, 185, 255, 0.8)',
+                        borderColor: 'rgba(116, 185, 255, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Task 3: Change Password'
+                        },
+                        legend: {
+                            position: 'top',
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            max: 25
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
